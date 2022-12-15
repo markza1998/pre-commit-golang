@@ -11,9 +11,11 @@ for sub in $(printf "%q\n" "${FILES[@]}" | xargs -n1 dirname | sort -u); do
 	if [ "${error_on_output:-}" -eq 1 ]; then
 		output=$(/usr/bin/env "${ENV_VARS[@]}" "${cmd[@]}" "${OPTIONS[@]}" "./${sub}" 2>&1)
 		if [ -n "${output}" ]; then
+		  echo "linex ${output}"
 			error_code=1
 		fi
 	elif ! /usr/bin/env "${ENV_VARS[@]}" "${cmd[@]}" "${OPTIONS[@]}" "./${sub}"; then
+	  echo "liney ${output}"
 		error_code=1
 	fi
 done
