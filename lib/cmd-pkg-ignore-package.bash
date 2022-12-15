@@ -12,7 +12,7 @@ export GO111MODULE=off
 if [ "${error_on_output:-}" -eq 1 ]; then
 	output=$(/usr/bin/env "${ENV_VARS[@]}" "${cmd[@]}" "${OPTIONS[@]}" 2>&1)
 	if [ -n "${output}" ]; then
-		printf "%s\n" "${output}"
+		printf "%s\n ttttttt" "${output}"
 		exit 1
 	fi
 else

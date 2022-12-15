@@ -441,8 +441,7 @@
     exclude: '(^|/)vendor/'
     language: 'script'
     description: "Run 'gosec [$ARGS] ./$(dirname $FILE)' for each staged .go file"
-    pass_filenames: false
-    require_serial: true
+    pass_filenames: true
 
 # ==============================================================================
 # go-sec-repo-mod
