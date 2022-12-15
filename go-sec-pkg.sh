@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 cmd=(gosec)
-  gosec ./...
+. "$(dirname "${0}")/lib/cmd-pkg-ignore-package.bash"
