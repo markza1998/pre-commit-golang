@@ -14,7 +14,6 @@ for sub in $(printf "%q\n" "${FILES[@]}" | xargs -n1 dirname | sort -u); do
 			error_code=1
 		fi
 	elif ! /usr/bin/env "${ENV_VARS[@]}" "${cmd[@]}" "${OPTIONS[@]}" "./${sub}"; then
-	  printf "%s\n test error" "${output}"
 		error_code=1
 	fi
 done
