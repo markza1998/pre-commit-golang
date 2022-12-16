@@ -10,6 +10,7 @@ if [ "${use_dot_dot_dot:-}" -eq 1 ]; then
 fi
 export GO111MODULE=off
 if [ "${error_on_output:-}" -eq 1 ]; then
+  printf "%s\n ttt1" "${output}"
 	output=$(/usr/bin/env "${ENV_VARS[@]}" "${cmd[@]}" "${OPTIONS[@]}" 2>&1)
 	if [ -n "${output}" ]; then
 		printf "%s\n ttttttt" "${output}"
