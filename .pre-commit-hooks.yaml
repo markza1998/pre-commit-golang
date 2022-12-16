@@ -436,7 +436,7 @@
 # ==============================================================================
 -   id: go-sec-pkg
     name: 'go-sec-pkg'
-    entry: go-sec-pkg.sh
+    entry: bash -c 'gosec ./...'
     types: [go]
     exclude: '(^|/)vendor/'
     language: 'script'
